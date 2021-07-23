@@ -1,0 +1,62 @@
+@import 'config';
+@import 'header';
+@import 'intro'; 
+@import 'portfolio'; 
+@import 'examples';
+@import 'prices';
+@import 'benefits';
+@import 'form';
+@import 'footer';
+@import 'responsive';
+ 
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #1C1D28;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+li {
+    list-style:none;
+   }
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+input[type=range] {
+    background: linear-gradient(to right, #1C1D28 0%,  #1C1D28 50%, #E4E4E4 50%, #E4E4E4 100%);
+    height: 1px;
+    -webkit-appearance: none;
+    }
+ 
+.portfolio__slider-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    }
+
+   input[type=range]::-moz-range-thumb {
+    width: 0;
+    height: 0;
+  }
+
+   
+.bold{
+  font-weight: 700;
+}
+  

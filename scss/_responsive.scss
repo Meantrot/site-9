@@ -1,0 +1,487 @@
+@include media-lt {
+    .portfolio{
+        &__card {
+           &-2
+            {
+                display: block;
+            }
+}     
+        &__br{
+            display:none;
+        }
+    }
+
+    .benefits{
+        &__cards{
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+        
+    }
+    .footer{
+        &__copyright{
+             
+            &-text{
+               &-pl{
+                   margin-left: auto;
+                   margin-right: 10px;
+               }
+
+              &-md{
+                margin-left: 0;
+              }
+             &-cr{
+                 order:-1;
+             }
+            }
+          }
+    }
+}
+
+@include media-lt-2{
+     .footer{
+        &__nav{
+            
+        }
+        &__menu{
+         &-one{
+             order: 1;
+             margin-bottom: 0;
+         }
+          &-two{
+           order: 3;
+           margin-right: 0;
+          }
+          &-three{
+            order: 2;
+            margin-right: 45px;
+          }
+        }
+     }
+}
+
+@include media-sm{
+
+    .text-10{
+        font-size: 13px;
+    }
+    .text-13{
+        font-size: 15px;
+    }
+
+    .text-15{
+        font-size: 20px;
+       }
+
+    .menu-btn{
+        display: none;
+    }
+    .header__nav{
+    display: flex;
+    }
+    .header__contacts{
+        display:block;
+    }
+    .intro{
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        &__title{
+            font-size: $font-size-lg;
+            line-height: 1.4;
+            margin-bottom: 35px;
+        }
+        &__subtitle{
+            font-weight: 400;
+            font-size: $font-size-md;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+    }
+    .intro__info{
+        grid-column: span 1;
+    }
+    .intro__picture{
+        grid-column: span 1;
+        display:block;
+    }
+    .container{ 
+        max-width: 882px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 18px;
+        padding-right:18px; 
+        
+    }
+    .portfolio{
+       
+        &__title{
+           margin-bottom: 60px;
+           font-size: $font-size-lg;
+            }
+        &__cards{
+            margin-bottom: 70px;
+        }
+        &__card {
+            max-width:196px;
+            margin: 0 45px 0 0;
+            position: relative;
+            &:last-child {
+                margin-right: 0;
+            }
+            &-2,
+            &-3
+            {
+                display: block;
+            }
+           &-oval{
+           }
+            &-text{
+           }
+            &-number{
+           }
+
+        }
+} 
+.examples
+{
+    &__title{
+      font-size: $font-size-lg;
+       
+    }
+    &__pictures{
+        margin: 0 auto;
+        }
+}
+.prices{
+   
+    &__title{
+      font-size: $font-size-lg;
+    }
+    
+    &__wrapper{
+        grid-template-rows: auto;
+       
+     }
+
+    &__card{
+        grid-column: span 1;
+        &-benefits{
+             
+        }
+    }
+}
+
+.benefits{
+    &__title{
+        font-size: $font-size-lg;
+    }
+    &__cards{
+       // grid-column-gap: 70px;
+      
+    }
+    &__card{
+        margin-bottom: 60px;
+        &-pic{
+             margin-bottom: 25px;
+        }
+        &-text{
+             font-size: $font-size-md;
+             min-width: 222px;
+        }
+    }
+}
+.form-mod{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+ }
+
+ .forms{
+    padding-top: 96px;
+    padding-bottom: 110px;
+ }
+ .form__wrapper{
+ .form{
+     &__label{
+        }
+      &__input{
+       &::placeholder{
+         }
+        }
+        &__button{
+            display:flex;
+             align-items: center;
+          &-btn{
+            width:170px;
+            height: 40px;
+            margin-right: 40px;
+           &:hover{
+              
+            }
+          }
+          &-check{
+            display: flex;
+            align-items: center;
+              }
+              &-checkbox{
+                 
+                
+              }
+        }
+    }
+    
+   }
+   .footer{
+       padding-top: 45px;
+       &__logo{
+        width:100%;
+        height: auto;
+        margin-bottom: 90px;
+      }
+      &__menu{
+        &-one{
+            margin-right: 80px;
+          }
+          &-three{
+            margin-right: 80px;
+          } 
+      }
+    &__copyright{
+         
+        &-text{
+           &-pl{
+           
+               margin-right: 30px;
+           }
+
+          &-md{
+          
+          }
+         &-cr{
+            
+         }
+        }
+      }
+}
+  }
+
+// MEDIA LARGE  ****************
+
+@include media-lg{
+
+    .text-15{
+        font-size: 30px;
+       }
+
+    .container{ 
+        max-width: 1130px;
+       }
+    .header {
+        font-size: $font-size-sm;
+    }
+    .header__nav-item{
+        margin-right: 45px;
+    }
+    .header__number{
+        margin-right: 45px;
+    }
+
+    .button{
+        width: 170px;
+        height:40px;
+        font-size: $font-size-sm;
+    }
+    .intro{
+        grid-column-gap: 97px;
+        &__title{
+            font-size: $font-size-hg;
+            margin-bottom: 30px;
+        }
+        &__subtitle{
+            font-weight: 400;
+            font-size: $font-size-md;
+            margin-bottom: 56px;
+        }
+        &__picture{
+            text-align: left;
+        }
+    }
+    .portfolio{
+        &__title{
+           font-size: $font-size-hg;
+           margin-bottom: 65px;
+            }
+        &__cards{
+            max-width: 980px;
+            margin-right: auto;
+            margin-left: auto;
+               
+        }
+        &__card {
+          max-width:200px;
+            &-4
+            {
+                display: block;
+            }
+            &-oval{
+              width: 113px;
+              height: 113px;
+              top:16px;
+            left:38px;
+        }
+            &-text{
+           }
+            &-number{
+                 font-size: 70px;     
+                   }
+        }
+} 
+.examples{
+    &__title{
+      font-size: $font-size-hg;
+       }
+    &__btn-link{
+       }
+    &__pictures{
+        max-width: 1110px;
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 25px;
+     }
+     &__picture-pic{
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        display: block;
+        min-height: 500px;
+        max-height: 560px;
+      }
+}
+.picture-1{
+    grid-column: span 20;
+}
+.picture-2{
+    grid-column: span 11;
+}
+.picture-3{
+    grid-column: span 9;
+}
+.prices{
+   
+    &__title{
+      font-size: $font-size-hg;
+    }
+    
+    &__wrapper{
+       
+       
+    }
+    &__card{
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        padding-bottom: 45px;
+        
+
+        &::after{
+          right:32px;
+          }
+         
+        &-title{
+          font-size: $font-size-md;
+        }
+        &-price{
+         font-size: $font-size-hg;
+         }
+         &-btn{
+         
+         }
+    
+         &-benefits{
+            max-width: 100%;
+         }
+    
+         &-benefit{
+            font-size: $font-size-md;
+          &:last-child{
+             
+           }
+         }
+      
+       }
+       .prices__btn{
+        padding-bottom: 44px;
+        width:100%;
+         
+      }
+     .prices__btn::after{
+      width:100%;
+     
+       }
+}
+
+.benefits{
+    margin-bottom: 110px;
+    &__title{
+        font-size: $font-size-hg;
+        
+    }
+    &__cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+.forms{
+    padding-top: 130px;
+    padding-bottom: 0;
+    &__wrapper{
+      display:flex;
+      }
+      &__text{
+          margin-right: 40px;
+        &-img{
+            display:block;
+        }
+        &-subtitle{
+            margin-bottom: 20px;
+        }
+    }
+   
+  }
+
+  .footer{
+    padding-top: 80px;
+    &__logo{
+      margin-bottom: 20px;
+      position:absolute;
+   }
+   &__menu{
+     &-one{
+         margin-right: 100px;
+       }
+       &-three{
+         margin-right: 100px;
+       } 
+   }
+  &__nav{
+      justify-content: flex-end;
+  }
+  &__wrapper{
+   position:relative;
+    
+  }
+  &__socials{
+    position:absolute;
+    top:70px;
+  }
+}
+
+ .footer__copyright-text{
+     font-size: 12px;
+ }
+}
+
+ 

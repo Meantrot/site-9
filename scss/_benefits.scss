@@ -1,0 +1,30 @@
+.benefits{
+    margin-bottom: 24px;
+    &__title{
+        margin-bottom: 40px;
+        font-size: $font-size-md;
+        font-weight: 500;
+    }
+    &__cards{
+        display:grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+         
+         
+    }
+    &__card{
+        margin-bottom: 50px;
+
+        
+        &-pic{
+            margin-bottom: 20px;
+        }
+        &-text{
+            font-size: $font-size-sm;
+            max-width: 200px;
+        }
+        &:last-child{
+            // margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+ .forms{
+   background-color: $primary-color;
+   padding-top: 66px;
+   padding-bottom: 96px;
+   color: white;
+   &__wrapper{
+
+   }
+   &__text{
+     text-align: center;
+     &-title{
+     
+    font-weight: 500;
+    margin-bottom: 20px;
+     }
+     &-subtitle{
+     
+    margin-bottom: 50px;
+     }
+     &-img{
+      display: none;
+     }
+   }
+ }
+
+ .form__wrapper{
+  max-width: 523px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  .form{
+    margin-bottom: 35px;
+    &__label{
+      
+      display:block;
+      margin-bottom: 8px;
+    }
+    &__input{
+      width:100%;
+      background: transparent;
+      background-size: 20px;
+      padding-bottom: 10px;
+      border: none;
+      border-bottom:1px solid #ffffff;
+      outline: none;
+      color: #ffffff;
+      &::placeholder{
+        color: rgba(255, 255, 255, 0.3);
+        font-size: $font-size-mb;
+        line-height: 1;
+      }
+      }
+      &__button{
+        &-btn{
+          width:100%;
+          padding: 10px 0;
+           
+          background-color: #FF5F68;
+          text-decoration: none;
+          outline: none;
+          border: 1px solid #FF5F68; 
+          @include transition-ease;
+          color: white;
+          &:hover{
+            color: black;
+            background:  white;
+          }
+        }
+        &-check{
+          display: none;
+          font-size: $font-size-mb;
+          
+        }
+        &-checkbox{
+          display:none;
+        }
+       
+      }
+  }
+  
+ }
+
+
+ .checkbox{
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-right: 14px;
+
+  &::before {
+    content: url(../img/form-check.svg);
+    position: absolute;
+    width:8px;
+    height: 8px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s;
+}
+ }
+
+ .form__button-checkbox:checked + .checkbox::before{
+   opacity: 1;
+ }

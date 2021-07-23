@@ -1,0 +1,91 @@
+$primary-color: #5551F7;
+$font-size-mb: 10px;
+$font-size-sm: 13px;
+$font-size-md: 15px;
+$font-size-lg: 20px;
+$font-size-hg: 30px;
+
+.button{
+  width: 130px;
+  height:33px;
+  font-size: $font-size-mb;
+   
+}
+.text-10{
+  font-size: 10px;;
+}
+
+.text-13{
+  font-size: 13px;
+ }
+
+ .text-15{
+  font-size: 15px;
+ }
+
+.container{
+    
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ;
+}
+@mixin btn-blue { 
+    text-decoration: none;
+    border: 1px solid $primary-color;  
+    background: $primary-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    @include transition-ease;
+    &:hover{
+        color: $primary-color;
+        background:  white;
+         
+    }
+   }
+
+   @mixin btn-white {
+    @include btn-blue;
+    background: white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    @include transition-ease;
+    &:hover{
+        color: white;
+        background:  $primary-color;
+         
+    }
+   }
+ 
+   @mixin media-lt {
+    @media screen and (min-width: 458px) {
+      @content;
+    }
+  }
+
+  @mixin media-lt-2 {
+    @media screen and (min-width: 618px) {
+      @content;
+    }
+  }
+
+@mixin media-sm {
+    @media screen and (min-width: 726px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 960px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+   
